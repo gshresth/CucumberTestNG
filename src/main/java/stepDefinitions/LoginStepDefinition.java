@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -22,6 +23,8 @@ public class LoginStepDefinition{
 	 public void user_already_on_login_page(){
 	 System.setProperty("webdriver.chrome.driver","/home/gshresth/chromedriver_linux64/chromedriver");
          //System.setProperty("webdriver.gecko.driver", "/home/gshresth/geckodriver");
+		 ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("useAutomationExtension", false);
 	 driver = new ChromeDriver();
 	// driver = new FirefoxDriver();
 	 driver.get("https://ui.freecrm.com/");
