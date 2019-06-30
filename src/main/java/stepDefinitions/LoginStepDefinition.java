@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import cucumber.api.java.en.Given;
@@ -20,10 +20,10 @@ public class LoginStepDefinition{
 	
 	 @Given("^user is already on Login Page$")
 	 public void user_already_on_login_page(){
-	 //System.setProperty("webdriver.chrome.driver","/home/gshresth/chromedriver_linux64/chromedriver");
-		 System.setProperty("webdriver.gecko.driver", "/home/gshresth/geckodriver");
-	// driver = new ChromeDriver();
-	 driver = new FirefoxDriver();
+	 System.setProperty("webdriver.chrome.driver","/home/gshresth/chromedriver_linux64/chromedriver");
+         //System.setProperty("webdriver.gecko.driver", "/home/gshresth/geckodriver");
+	 driver = new ChromeDriver();
+	// driver = new FirefoxDriver();
 	 driver.get("https://ui.freecrm.com/");
 	 }
 	
