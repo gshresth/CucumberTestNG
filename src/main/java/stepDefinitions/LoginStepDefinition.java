@@ -23,9 +23,11 @@ public class LoginStepDefinition{
 	 public void user_already_on_login_page(){
 	 System.setProperty("webdriver.chrome.driver","/home/gshresth/chromedriver_linux64/chromedriver");
          //System.setProperty("webdriver.gecko.driver", "/home/gshresth/geckodriver");
-		 ChromeOptions options = new ChromeOptions();
-		options.setExperimentalOption("useAutomationExtension", false);
+		
 	 driver = new ChromeDriver();
+	ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 	// driver = new FirefoxDriver();
 	 driver.get("https://ui.freecrm.com/");
 	 }
